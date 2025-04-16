@@ -40,8 +40,9 @@ void loop() {
     Serial.println("Пожар");
   }
   if (dist <= 60){
+
     int value = 0;
-    for(int i = 0; i<= 60; i++){
+    for(int i = random(0, 20); i<= 60; i++){
       float adc0 = mcp3021.readADC();
       float h = map(adc0, air_value, water_value, moisture_0, moisture_100);
       Fire.get_ir_and_vis();
@@ -50,7 +51,7 @@ void loop() {
           Serial.println("Протечка!");
       }
       if (visib >= 8000){
-          Serial.println("Пожар");
+          Serial.println("Пожар!!!");
       }
       value = i * 1.66666667;
       Serial.println("Зарядка:" + String(value) + "%");

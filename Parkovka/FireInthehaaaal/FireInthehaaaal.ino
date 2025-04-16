@@ -15,5 +15,5 @@ void loop() {
     Serial.println("Пожар");
   }
   Serial.print("Видимый: ");
- // Serial.println(String(Fire.vis_data, 1));
+  Serial.println(String(Fire.vis_data, 1));
 }
