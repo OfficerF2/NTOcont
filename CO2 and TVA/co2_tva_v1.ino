@@ -31,7 +31,18 @@ void loop() {
   CO2Sensor.measureAirQuality();
   Serial.print("CO2: ");
   Serial.print(CO2Sensor.CO2);
-  Serial.print(" ppm\tTVOC: ");
+  if (CO2Sensor.CO2<=400) {
+    Serial.print(" ppm - по шкале 0\tTVOC: ");
+  }
+  if (CO2Sensor.CO2>400 && CO2Sensor.CO2<=600)  {
+    Serial.print(" ppm - по шкале 1\tTVOC: ");
+  }
+  if (CO2Sensor.CO2>600 && CO2Sensor.CO2<=1000)  {
+    Serial.print(" ppm - по шкале 2\tTVOC: ");
+  }
+  if (CO2Sensor.CO2>1000)  {
+    Serial.print(" ppm - по шкале 3\tTVOC: ");
+  }
   Serial.print(CO2Sensor.TVOC);
   Serial.println(" ppb");
   Serial.print("Temperature: ");
