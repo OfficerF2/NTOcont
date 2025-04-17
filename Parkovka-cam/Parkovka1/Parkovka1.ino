@@ -5,7 +5,7 @@
 #include <WiFi.h>
 #include <WiFiUdp.h>
 
-// Настройки WiFi и UDP
+// Настройки WiFi и 
 const char* ssid = "POCO M3";
 const char* password = "007008009124";
 const char* serverIP = "192.168.43.193";  // IP сервера (ESP32-CAM)

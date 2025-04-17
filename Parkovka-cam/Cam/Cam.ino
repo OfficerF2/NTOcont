@@ -12,8 +12,8 @@ const char* password = "007008009124";
 #include <WiFi.h>
 #include <WiFiUdp.h>
 
-// Настройки WiFi и UDP
-WiFiUDP udp;
+// Настройки WiFi и UD
+WiFiUDP udp; 
 unsigned int localUdpPort = 8888;  // Порт сервера
 char incomingPacket[255];       
 // Initialize Telegram BOT
