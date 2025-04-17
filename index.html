@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локальный сервер</title>
+    <style>
+.dtach-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0;
+    align-items: stretch;
+}
+
+.dtach {
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: all 0.3s ease;
+    width: 200px;
+    flex: 0 0 auto;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.dtach:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    background-color: #e9f5ff;
+}
+
+.dtach h2 {
+    color: #2c6cb0;
+    margin-top: 0;
+    border-bottom: 1px solid #d1e3f8;
+    padding-bottom: 8px;
+}
+
+#alerts {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#alerts li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #d1e3f8;
+}
+
+#alerts li:last-child {
+    border-bottom: none;
+}   
+    </style>
+</head>
+<body>
+    <h1>Сайт умного города</h1>
+    <div class="dtach-container">
+        <div class="dtach" id="dist">Растояние на парковке:</div>
+        <div class="dtach" id="Fire">Огонь:</div>
+        <div class="dtach" id="Closed">Статус:</div>
+        <div class="dtach" id="Allert">
+            <h2>Оповещения:</h2>
+            <ul id="alerts"></ul>
+        </div>
+    </div>
+</body>
+</html>
