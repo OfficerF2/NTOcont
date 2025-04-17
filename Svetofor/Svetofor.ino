@@ -9,7 +9,7 @@ VL53L0X lox;
 CRGB leds[NUM_LEDS];
 
 // Переменные для подсчета машин
-int count = 0;
+int count = 0;  
 unsigned long lastResetTime = 0;
 const unsigned long resetInterval = 60000;
 unsigned long lastDetectionTime = 0;
